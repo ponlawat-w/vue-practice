@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue.js</title>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <button v-if="!created" type="button" onclick="startVue();">Start Vue</button>
+        <hr>
+      </div>
+      <input type="text" name="message" v-model="obj.message">
+      <button type="button" v-on:click="check">Check</button>
+      <hr>
+      {{obj.message}}
+      <hr>
+      <button type="button" v-on:click="destroy">Destroy Vue</button>
+    </div>
+    <script src="../vue.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Vue.js</title>
+  </head>
+  <body>
+    <div id="app">
+      <div :class="{ 'my-a': myClassA, 'my-b': myClassB }">
+        Hello World! (Normal Classes)
+      </div>
+      <div :class="negatedClasses">
+        Hello World! (Negated Classes)
+      </div>
+      <div>
+        <strong>Class A:</strong>
+        {{myClassA ? 'on' : 'off'}}
+        <button type="button" @click="myClassA = !myClassA;">Switch</button>
+      </div>
+      <div>
+        <strong>Class B:</strong>
+        {{myClassB ? 'on' : 'off'}}
+        <button type="button" @click="myClassB = !myClassB;">Switch</button>
+      </div>
+    </div>
+    <script src="../vue.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

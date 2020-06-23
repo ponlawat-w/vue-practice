@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue.js</title>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" name="message" v-model="message" v-bind:disabled="disabled" placeholder="Message…">
+      <button type="button" v-on:click="disabled = !disabled;">Switch Availability</button>
+      <hr>
+      <div v-once>Message at first: {{message}}</div>
+      <div>Current message: {{message}}</div>
+      <div>Message with HTML binding: <span v-html="message"></span></div>
+    </div>
+    <script src="../vue.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue.js</title>
+  </head>
+  <body>
+    <div id="app">
+      <div>{{people.length}} in list</div>
+      <greeting-box v-for="person in people" v-bind:person="person"></greeting-box>
+      <greeting-box v-bind:person="{firstName: 'Special', lastName: 'Person'}"></greeting-box>
+    </div>
+    <script src="../vue.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
